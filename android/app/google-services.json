@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "213361527066",
+    "project_id": "fractionapplication",
+    "storage_bucket": "fractionapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213361527066:android:3091afbe086d5a008bc4a3",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213361527066-eorrjurn6m70bt5o0n6tsih1m6teh5ru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiHkSu7LrMHMOCGYw6o65qhcw7dJMQkk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213361527066-eorrjurn6m70bt5o0n6tsih1m6teh5ru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
