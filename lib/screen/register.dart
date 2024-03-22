@@ -118,6 +118,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   await emailLogin.add({
                                     "Username": profile.email,
                                     "Email": profile.email,
+                                    "Coins": 0,
                                   });
                                 } on FirebaseAuthException catch (e) {
                                   print(e.code);

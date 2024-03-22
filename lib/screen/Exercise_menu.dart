@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/Exercise_7.dart';
 
 class Exercise_menu extends StatefulWidget {
   const Exercise_menu({Key? key}) : super(key: key);
@@ -45,6 +46,17 @@ class _MyWidgetState extends State<Exercise_menu> {
               menulist[index][0],
               style: TextStyle(fontSize: 18),
             ),
+            onTap: () {
+              if (index == 6) {
+                // ตรวจสอบว่าเมื่อกดที่รายการ "การบวก การลบ การคูณ การหารระคนเศษส่วนและจำนวนคละ"
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Exercise_7(), // ไปยังหน้า Exercise_7
+                  ),
+                );
+              }
+            },
           ),
         );
       },

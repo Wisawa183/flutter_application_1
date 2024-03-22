@@ -16,10 +16,17 @@ class _ReadingScreenState extends State<ReadingScreen> {
     "assets/content1/content1_3.png",
     "assets/content1/content1_4.png",
     "assets/content1/content1_5.png",
+    "assets/content1/content1_6.png",
+    "assets/content1/content1_7.png",
+    "assets/content1/content1_8.png",
+    "assets/content1/content1_9.png",
+    "assets/content1/content1_10.png",
+    "assets/content1/content1_11.png",
   ];
 
   PageController _pageController = PageController(initialPage: 0);
   int currentPage = 1;
+  bool isDragging = false;
 
   @override
   void initState() {
@@ -44,7 +51,11 @@ class _ReadingScreenState extends State<ReadingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('เศษส่วนแท้และเศษส่วนเกิน'),
+        title: AnimatedOpacity(
+          duration: Duration(milliseconds: 300),
+          opacity: isDragging ? 0 : 1,
+          child: Text('เศษส่วนแท้และเศษส่วนเกิน'),
+        ),
         backgroundColor: const Color.fromARGB(255, 203, 76, 225),
       ),
       body: Stack(
@@ -52,9 +63,18 @@ class _ReadingScreenState extends State<ReadingScreen> {
           PageView.builder(
             controller: _pageController,
             itemCount: contentImages.length,
+            physics: isDragging ? NeverScrollableScrollPhysics() : null,
             itemBuilder: (context, index) {
               return GestureDetector(
+                onHorizontalDragStart: (_) {
+                  setState(() {
+                    isDragging = true;
+                  });
+                },
                 onHorizontalDragEnd: (details) {
+                  setState(() {
+                    isDragging = false;
+                  });
                   if (details.primaryVelocity! > 0) {
                     if (index > 0) {
                       _pageController.previousPage(
@@ -71,9 +91,13 @@ class _ReadingScreenState extends State<ReadingScreen> {
                     }
                   }
                 },
-                child: Image.asset(
-                  contentImages[index],
-                  fit: BoxFit.contain,
+                child: AnimatedOpacity(
+                  duration: Duration(milliseconds: 300),
+                  opacity: isDragging ? 0.5 : 1,
+                  child: Image.asset(
+                    contentImages[index],
+                    fit: BoxFit.contain,
+                  ),
                 ),
               );
             },

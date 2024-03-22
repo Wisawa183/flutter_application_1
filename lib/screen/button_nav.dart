@@ -15,7 +15,7 @@ class _bottombarState extends State<bottombar> {
   List widgetoptions = [
     Content_Menu(),
     Scrollbar(child: Exercise_menu()),
-    shop()
+    Shop()
   ];
 
   List<String> titles = ['เนื้อหา', 'โหมดแบบฝึกหัด', 'ร้านค้า'];
@@ -40,7 +40,7 @@ class _bottombarState extends State<bottombar> {
           BottomNavigationBarItem(icon: Icon(Icons.book), label: 'เนื้อหา'),
           BottomNavigationBarItem(
               icon: Icon(Icons.gamepad), label: 'โหมดแบบฝึกหัด'),
-          BottomNavigationBarItem(icon: Icon(Icons.shop), label: 'ร้านค้า'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'โปรไฟล์'),
         ],
         currentIndex: currentIndex,
         onTap: (index) {
