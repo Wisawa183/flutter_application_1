@@ -28,7 +28,7 @@ class QuestionController extends GetxController
       });
     _animationController.forward().whenComplete(nextQuestion);
     _pageController = PageController();
-    _questions = sample_data
+    _questions = test_data
         .map((question) => Question(
             id: question['id'],
             question: question['question'],

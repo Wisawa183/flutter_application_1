@@ -15,7 +15,7 @@ class _bottombarState extends State<bottombar> {
   List widgetoptions = [
     Content_Menu(),
     Scrollbar(child: Exercise_menu()),
-    Shop()
+    shop()
   ];
 
   List<String> titles = ['เนื้อหา', 'โหมดแบบฝึกหัด', 'ร้านค้า'];

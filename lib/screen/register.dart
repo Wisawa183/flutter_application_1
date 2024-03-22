@@ -119,6 +119,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                     "Username": profile.email,
                                     "Email": profile.email,
                                     "Coins": 0,
+                                    "Choicescore": 0,
                                   });
                                 } on FirebaseAuthException catch (e) {
                                   print(e.code);
